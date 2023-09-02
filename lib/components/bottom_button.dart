@@ -4,13 +4,13 @@ import '../constants.dart';
 class BottomButton extends StatelessWidget {
   const BottomButton({@required this.textButton,@required this.onPress});
 
-  final String textButton;
-  final Function onPress;
+  final String? textButton;
+  final Function()? onPress;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: this.onPress,
+      onTap: onPress!,
       child: Container(
         color : kBottomContainerColor,
         margin: EdgeInsets.only(top: 10,),
@@ -19,7 +19,7 @@ class BottomButton extends StatelessWidget {
         height: kBottomContainerHeight,
         child: Center(
           child: Text(
-            this.textButton,
+            textButton!,
             style: kBottomButton,
           ),
         ),
