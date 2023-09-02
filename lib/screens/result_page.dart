@@ -9,9 +9,9 @@ class ResultPage extends StatelessWidget {
 
   ResultPage({@required this.bmiResult,@required this.resultText,@required this.interpretation});
 
-  final String bmiResult;
-  final String resultText;
-  final String interpretation;
+  final String? bmiResult;
+  final String? resultText;
+  final String? interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +47,11 @@ class ResultPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      this.resultText.toUpperCase(),
+                      resultText!.toUpperCase(),
                       style: kResultTextStyle,
                     ),
                     Text(
-                      this.bmiResult,
+                      bmiResult!,
                       style: kBMITextStyle,
                     ),
                     Column(
@@ -67,7 +67,7 @@ class ResultPage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      this.interpretation,
+                      interpretation!,
                       textAlign: TextAlign.center,
                       style: kInterTextStyle,
                     ),
