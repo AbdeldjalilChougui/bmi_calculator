@@ -4,9 +4,9 @@ import '../constants.dart';
 class GenderCard extends StatelessWidget {
   GenderCard({@required this.genderIcon,this.genderType,this.textColor});
 
-  final IconData genderIcon;
-  final String genderType;
-  final Color textColor;
+  final IconData? genderIcon;
+  final String? genderType;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class GenderCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Icon(
-          this.genderIcon,
+          genderIcon!,
           size: 80,
         ),
         SizedBox(height: 20,),
         Text(
-          this.genderType,
+          genderType!,
           style: TextStyle (
             fontSize: 18,
             color: this.textColor,
